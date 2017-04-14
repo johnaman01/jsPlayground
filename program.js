@@ -24,12 +24,7 @@ document.writeln(y);
 var a = true;
 
 document.writeln(typeof(a));
-
-//toUpperCase();
 document.writeln('cat'.toUpperCase());
-
-//with foo(); present, document.writeln(a); does not compile?
-foo();
 document.writeln(a);
 
 //hoisting with foo
@@ -38,9 +33,7 @@ function foo(){
   document.writeln(a);
 }
 
-//interesting
-
-
+foo();
 
 
 

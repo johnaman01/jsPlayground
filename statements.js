@@ -76,6 +76,29 @@ catch ( gfProperty ){
   //the catch clause defines a new variable that will receive the exception object
 }
 
+//return causes early return from a function
+//return;
+
+//break causes exit from a loop or switch.  Can have a label that will cause an exit
+//from the labeled statement.
+//break label;
+
+//expression statements can:
+//assign values to one or more variables or members:
+var dog = "ralph";
+var cat = "meowsers";
+//these are var statements...
+
+//invoke a method:
+//strange that foo can be invoked ("ie called) from statements.js
+//foo() must be in the global namespace?
+foo();
+foo(dog);
+
+//delete a property from an object!
+//= is assignment === is equality
+//+= adds or concatenates
+
 
 
 
