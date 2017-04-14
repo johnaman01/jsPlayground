@@ -43,7 +43,38 @@ else {
 //NaN
 //**EVERYTHING ELSE IS truthy!
 
+var arr = ["hello", "goodbye", "hola", "farewell"];
 
+document.writeln(typeof(arr));
+
+for (i = 0; i < arr.length; i++){
+  document.writeln(arr[i]);
+}
+
+//forin enumerates the property names (or keys) of an object...
+//NOT the values of those keys???
+//on each iteration, another property name string from the object is assigned to the variable
+
+var peeps = { "Bf" : "John", "Gf" : "Nikki", "Cf" : "Meowzers" };
+for (peep in peeps){
+  //checks to see if the property name is a member of peeps or found on prototype chain
+  if (peeps.hasOwnProperty(peep))
+    document.writeln(peep);
+}
+
+//do statement (like while, but the statement is executed at least once
+do {
+  document.writeln(peeps.Bf);
+}
+while ("");
+
+try {
+  document.writeln(peeps.Gf);
+}
+catch ( gfProperty ){
+  //I don't know what goes in here:
+  //the catch clause defines a new variable that will receive the exception object
+}
 
 
 
