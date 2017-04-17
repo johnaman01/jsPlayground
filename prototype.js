@@ -7,8 +7,10 @@ if (typeof Object.beget !== 'function') {
     return new F();
   };
 }
-
-var another_stooge = Object.beget(stooge);
+//GLOBAL ABATEMENT:
+//to minimize the use of global variables create a single global variable for 
+//your application: line12 of objects.js
+var another_stooge = Object.beget(MYAPP.stooge);
 another_stooge['first-name'] = 'Harry';
 another_stooge['middle-name'] = 'Moses';
 another_stooge.nickname = 'Moe';

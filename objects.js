@@ -7,8 +7,10 @@
 //OBJECTS
 //+++++++
 //
-var empty_object = {};
-var stooge = {
+
+
+var MYAPP = {};
+MYAPP.stooge = {
   "first-name" : "Jerome",
   "last-name" : "Howard"
 };
@@ -21,7 +23,7 @@ var show = {
 //"first-name" or first_name
 //
 //A property's value can be obtained from any expression, including another object literal:
-var flight = {
+MYAPP.flight = {
   airline : "Oceanic",
   number : 815,
   //the departure object contains information about the flight as it departs...ie the airport's IATA, etc.
@@ -41,8 +43,8 @@ var flight = {
 //values can be retrieved from an object by wrapping a string expression in a [ ] suffix.
 //if the string expression is a constant, and if it is a legal JS name and not
 //a reserved word, then the . notation can be used instead.
-document.writeln(stooge["first-name"]);
-document.writeln(flight.departure.IATA);
+document.writeln(MYAPP.stooge["first-name"]);
+document.writeln(MYAPP.flight.departure.IATA);
 
 var middle = stooge["middle-name"] || "(none)";
 document.writeln(middle);
@@ -52,28 +54,6 @@ document.writeln(middle);
 
 document.writeln(flight.equipment);
 document.writeln(flight.equipment.model);
-
-//prototype
-if (typeof Object.beget !== 'function') {
-  Object.beget = function (o) {
-    var F = function () {};
-    F.prototype = o;
-    return new F();
-  };
-}
-
-var another_stooge = Object.beget(stooge);
-another_stooge['first-name'] = 'Harry';
-document.writeln(another_stooge['first-name']);
-
-
-
-
-
-
-
-
-
 
 
 
