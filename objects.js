@@ -1,3 +1,4 @@
+'strict mode'
 //numbers, strings, booleans, null and undefined are all simple types
 //numbers, strings, booleans are object-like, but are immutable
 //

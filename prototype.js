@@ -1,3 +1,4 @@
+'strict mode'
 //prototype
 if (typeof Object.beget !== 'function') {
   Object.beget = function (o) {
